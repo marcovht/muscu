@@ -366,7 +366,7 @@ function paint(p,s){LAST=[p,s];if(!BASE)return;
    if(edge){R*=.6;G*=.6;B*=.6}
    o[j]=R;o[j+1]=G;o[j+2]=B;o[j+3]=255}
   ctx.putImageData(out,0,0)});}
-function paintR(rt){if(!BASE)return;LASTR=rt;
+function paintR(rt){LASTR=rt;if(!BASE)return;
  const tv=KEYOF.map(k=>k?Math.min(1,rt[k]||0):0);const W=350,H=780;
  VIEWS.forEach(([id,ox])=>{const cv=$(id),ctx=cv.getContext('2d'),out=ctx.createImageData(W,H),o=out.data;
   const T=new Float32Array(W*H),Lb=new Uint8Array(W*H);
